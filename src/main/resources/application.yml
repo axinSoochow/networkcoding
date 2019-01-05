@@ -11,4 +11,4 @@ networkcode:
   packetNumber: 1000    # 总共传输数据包个数
   interval: 50          # 传输时间间隔
   packetLoss: 0.20      # 链路丢包率
-  times: 10             # 实验重复次数
+  times: 50            # 实验重复次数

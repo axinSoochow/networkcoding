@@ -1,14 +1,15 @@
 package com.suda.edu.networkcoding.web;
 
+import com.suda.edu.networkcoding.service.algorithmService.RunService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @Slf4j
-public class AxinController {
+@RestController
+public class RunController {
 
     @Value("${networkcode.number}")
     private int number;
@@ -25,9 +26,14 @@ public class AxinController {
     @Value("${networkcode.times}")
     private int times;
 
-    @RequestMapping("/run")
-    public String run() {
+    @Autowired
+    private RunService runService;
 
+    @RequestMapping("/run")
+    public String run1() {
+//        runService.computePerformanceWithNumberChange(number, packetNumber, interval, packetLoss, times);
+//        runService.computePerformanceWithPacketLossChange(number, packetNumber, interval, packetLoss, times);
+        runService.computePerformanceWithIntervalChange(number, packetNumber, interval, packetLoss, times);
         return "程序运行成功！";
     }
 }

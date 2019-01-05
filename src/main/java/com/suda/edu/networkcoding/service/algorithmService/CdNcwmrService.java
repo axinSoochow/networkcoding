@@ -19,7 +19,7 @@ public class CdNcwmrService implements ComputeTBService {
 
         double bandWith = 0;
         for (int i = 0; i < times; i++) {
-            bandWith += NetworkCodeTools.getCommonBandwidth(cdncwmr, number, packetNumber, interval, packetLoss, 1);
+            bandWith += NetworkCodeTools.getCommonBandwidth(cdncwmr, number, packetNumber, interval, packetLoss, 0);
         }
         double res = NetworkCodeTools.computeDivide(bandWith, times);
         return res;
