@@ -2,6 +2,7 @@ package com.suda.edu.networkcoding.tools;
 
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * 矩阵操作工具类
@@ -81,7 +82,7 @@ public class MatrixTools {
     }
 
     /**
-     * List结构转换为数据结构
+     * List结构转换为数组结构
      *
      * @param list
      * @return
@@ -90,6 +91,21 @@ public class MatrixTools {
         int[] res = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
             res[i] = list.get(i);
+        }
+        return res;
+    }
+
+    /**
+     * Set结构转化为数组结构
+     * @param set
+     * @return
+     */
+    public static int[] setToArray(Set<Integer> set) {
+        int length = set.size();
+        int[] res = new int[length];
+        int index = 0;
+        for (int data : set) {
+            res[index++] = data;
         }
         return res;
     }

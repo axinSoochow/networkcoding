@@ -31,8 +31,8 @@ public class RunController {
 
     @RequestMapping("/run")
     public String run1() {
-//        runService.computePerformanceWithNumberChange(number, packetNumber, interval, packetLoss, times);
-//        runService.computePerformanceWithPacketLossChange(number, packetNumber, interval, packetLoss, times);
+        runService.computePerformanceWithNumberChange(number, packetNumber, interval, packetLoss, times);
+        runService.computePerformanceWithPacketLossChange(number, packetNumber, interval, packetLoss, times);
         runService.computePerformanceWithIntervalChange(number, packetNumber, interval, packetLoss, times);
         return "程序运行成功！";
     }
