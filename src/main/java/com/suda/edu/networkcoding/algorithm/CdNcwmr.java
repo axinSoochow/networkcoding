@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 专利中描述的避免冲突的网络编码方法
+ * 基于冲突检测的网络编码重传包组合算法
  * 其效果和oncsb方法相同，oncsb方法复杂度会更小一点
  */
 @Component("cdncwbr")
