@@ -109,4 +109,12 @@ public class MatrixTools {
         }
         return res;
     }
+
+    public static void StringToData(String str) {
+        String[] datas = str.split(",");
+        for (String data : datas) {
+            System.out.println(data);
+        }
+    }
+
 }

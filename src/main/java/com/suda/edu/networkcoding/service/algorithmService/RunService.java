@@ -112,7 +112,7 @@ public class RunService {
         List<Double> oncmbData = new ArrayList<>();
         List<Double> oncsbData = new ArrayList<>();
 
-        for (double i = 5; i <= 35; i += 5) {
+        for (double i = 5; i <= 25; i += 1) {
 
             //处理double类型的链路丢包率
             packetLoss = new BigDecimal(new Double(i)).divide(new BigDecimal(100)).doubleValue();
@@ -162,7 +162,7 @@ public class RunService {
         List<Double> oncmbData = new ArrayList<>();
         List<Double> oncsbData = new ArrayList<>();
 
-        for (int i = 10; i <= 100; i += 10) {
+        for (int i = 10; i <= 100; i += 5) {
             axis.add(new Double(i));
             cdncwmrData.add(cdncwmrService.computeTB(number, packetNumber, i, packetLoss, times));
             hwnerData.add(hwnerService.computeTB(number, packetNumber, i, packetLoss, times));

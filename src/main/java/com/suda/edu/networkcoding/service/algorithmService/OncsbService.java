@@ -19,7 +19,7 @@ public class OncsbService implements ComputeTBService {
     public double computeTB(int number, int packetNumber, int interval, double packetLoss, int times) {
         double bandWith = 0;
         for (int i = 0; i < times; i++) {
-            bandWith += NetworkCodeTools.getCommonBandwidth(oncsb, number, packetNumber, interval, packetLoss, 1);
+            bandWith += NetworkCodeTools.getCommonBandwidth(oncsb, number, packetNumber, interval, packetLoss, 0);
         }
         return NetworkCodeTools.computeDivide(bandWith, times);
     }

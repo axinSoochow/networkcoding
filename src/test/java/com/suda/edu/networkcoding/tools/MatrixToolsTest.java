@@ -17,4 +17,10 @@ public class MatrixToolsTest {
         int[] res = MatrixTools.setToArray(set);
         System.out.println(Arrays.toString(res));
     }
+
+    @Test
+    public void StringToDataTool() {
+        String data = "1.36,1.32,1.3,1.29,1.28,1.27,1.26,1.26,1.25,1.25,1.25,1.25,1.24,1.24,1.24,1.24,1.24,1.23,1.23";
+        MatrixTools.StringToData(data);
+    }
 }
